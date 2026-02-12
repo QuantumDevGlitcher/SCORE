@@ -1,0 +1,8 @@
+pyproject.toml
+src/score_gui/__init__.py
+src/score_gui/app.py
+src/score_gui.egg-info/PKG-INFO
+src/score_gui.egg-info/SOURCES.txt
+src/score_gui.egg-info/dependency_links.txt
+src/score_gui.egg-info/requires.txt
+src/score_gui.egg-info/top_level.txt

@@ -1,0 +1,7 @@
+Metadata-Version: 2.4
+Name: score-gui
+Version: 0.1.0
+Summary: SCORE GUI
+Requires-Python: >=3.11
+Requires-Dist: streamlit
+Requires-Dist: score-core

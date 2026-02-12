@@ -1,0 +1,9 @@
+pyproject.toml
+src/score_core/__init__.py
+src/score_core.egg-info/PKG-INFO
+src/score_core.egg-info/SOURCES.txt
+src/score_core.egg-info/dependency_links.txt
+src/score_core.egg-info/requires.txt
+src/score_core.egg-info/top_level.txt
+src/score_core/application/use_cases/recommend_outfit.py
+src/score_core/domain/entities/garment.py

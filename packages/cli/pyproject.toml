@@ -1,0 +1,15 @@
+[project]
+name = "score-cli"
+version = "0.1.0"
+description = "SCORE CLI"
+requires-python = ">=3.11"
+dependencies = [
+  "typer",
+  "score-core",
+]
+
+[project.scripts]
+score = "score_cli.main:app"
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]

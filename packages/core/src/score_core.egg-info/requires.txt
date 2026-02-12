@@ -1,0 +1,6 @@
+numpy
+pydantic
+opencv-python
+scikit-fuzzy
+torch
+torchvision

@@ -1,0 +1,16 @@
+[project]
+name = "score-core"
+version = "0.1.0"
+description = "SCORE Core: domain + use cases + ports + adapters"
+requires-python = ">=3.11"
+dependencies = [
+  "numpy",
+  "pydantic",
+  "opencv-python",
+  "scikit-fuzzy",
+  "torch",
+  "torchvision",
+]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
