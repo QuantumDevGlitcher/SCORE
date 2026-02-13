@@ -5,11 +5,14 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="55b4bb05-c38f-4de5-92f2-0380893dceab" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/SCORE.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/profiles_settings.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/packages/core/src/experiments/Wardrobe_genie.ipynb" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/packages/core/src/experiments/Workflow.ipynb" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/packages/core/src/experiments/crop_0_shirt_blouse.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/packages/core/src/experiments/crop_1_top_t-shirt_sweatshirt.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/packages/core/src/experiments/data/image_examples/person-3070570300.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/packages/core/src/experiments/design.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/SCORE.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/SCORE.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -20,9 +23,28 @@
     <option name="cachedIndexableFilesCount" value="79" />
     <option name="fileBasedEmbeddingIndicesEnabled" value="true" />
   </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Jupyter Notebook" />
+      </list>
+    </option>
+  </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
+  <component name="GitHubPullRequestSearchHistory"><![CDATA[{
+  "lastFilter": {
+    "state": "OPEN",
+    "assignee": "ridamansour"
+  }
+}]]></component>
+  <component name="GithubPullRequestsUISettings"><![CDATA[{
+  "selectedUrlAndAccountId": {
+    "url": "https://github.com/QuantumDevGlitcher/SCORE.git",
+    "accountId": "d277a2c1-fc8c-4df9-84e4-331dfa1af696"
+  }
+}]]></component>
   <component name="McpProjectServerCommands">
     <commands />
     <urls />
@@ -49,6 +71,7 @@
     "git-widget-placeholder": "master",
     "ignore.virus.scanning.warn.message": "true",
     "junie.onboarding.icon.badge.shown": "true",
+    "last_opened_file_path": "/Users/ridamansour/DataspellProjects/SCORE/packages/core/src/experiments",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
@@ -59,11 +82,18 @@
     "vue.rearranger.settings.migration": "true"
   }
 }]]></component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/packages/core/src/experiments" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/packages/core/src/experiments/data/image_examples" />
+    </key>
+  </component>
   <component name="SharedIndexes">
     <attachedChunks>
       <set>
-        <option value="bundled-js-predefined-d6986cc7102b-9b0f141eb926-JavaScript-PY-253.30387.173" />
-        <option value="bundled-python-sdk-4762d8aabb82-6d6dccd035ac-com.jetbrains.pycharm.pro.sharedIndexes.bundled-PY-253.30387.173" />
+        <option value="bundled-python-sdk-bf879d056d4a-297dacbbd45d-com.jetbrains.pycharm.ds.sharedIndexes.bundled-DS-253.30387.154" />
       </set>
     </attachedChunks>
   </component>
