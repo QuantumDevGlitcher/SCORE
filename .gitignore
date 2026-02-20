@@ -1,14 +1,22 @@
+# Python envs
 .venv/
 venv/
+
+# Python cache
 __pycache__/
 *.pyc
+.pytest_cache/
+
+# Build outputs
 dist/
 build/
-.idea/
-.DS_Store
-# JetBrains / PyCharm
+*.egg-info/
+
+# IDE / OS
 .idea/
 *.iml
+.DS_Store
+
 # ML / training artifacts (do not commit)
 data/raw/
 data/processed/
@@ -18,8 +26,14 @@ checkpoints/
 runs/
 wandb/
 logs/
+lightning_logs/
+mlruns/
+tensorboard/
+
+# Model / weight files
 *.pt
 *.pth
+*.ptl
 *.ckpt
 *.onnx
 *.tflite
@@ -27,3 +41,4 @@ logs/
 *.pkl
 *.joblib
 *.npz
+*.safetensors
