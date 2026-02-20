@@ -1,0 +1,100 @@
+@startuml
+title SCORE — System Context
+
+left to right direction
+skinparam shadowing false
+skinparam componentStyle rectangle
+skinparam packageStyle rectangle
+skinparam defaultFontName Arial
+
+' --- ACTORS ---
+actor "User" as User
+
+' --- EXTERNAL SYSTEMS / SERVICES ---
+cloud "Internet" as Internet {
+  component "Weather API\n(Optional)" as WeatherAPI
+  component "IP Geolocation\n(Optional)" as GeoIP
+}
+
+' --- SCORE SYSTEM BOUNDARY ---
+rectangle "SCORE System" as SCORE {
+
+  ' UI Layer
+  package "UI Layer" {
+    component "CLI (Typer)" as CLI
+    component "GUI (Streamlit)" as GUI
+    component "Mobile App (Android)\n(Future)" as ANDROID
+  }
+
+  ' Core Engine
+  package "Core Engine (score-core)" {
+    component "Recommendation Orchestrator" as Orchestrator
+    component "Scoring Engine\n(Fuzzy + Rules)" as Scoring
+    component "Personalization\n(Reinforcement-lite)\n(Optional)" as RL
+  }
+
+  ' Perception (Optional)
+  package "Perception Layer\n(Optional)" {
+    component "Vision Inference\n(Model Weights)" as Vision
+    component "Color Extraction\n(K-Means)" as Color
+  }
+
+  ' Persistence
+  package "Local Storage" {
+    database "Wardrobe Store\n(SQLite/Local Files)" as WardrobeDB
+    database "Feedback Log\n(Local)" as FeedbackDB
+  }
+
+  ' Adapters / Ports
+  package "Adapters (Ports)" {
+    component "Weather Adapter" as WeatherAdapter
+    component "Geo Adapter" as GeoAdapter
+    component "Storage Adapter" as StorageAdapter
+    component "Vision Adapter" as VisionAdapter
+  }
+}
+
+' --- USER INTERACTIONS ---
+User --> CLI : commands + inputs
+User --> GUI : forms + uploads
+User --> ANDROID : camera + inputs\n(future)
+
+' --- UI to Core ---
+CLI --> Orchestrator : request recommendation
+GUI --> Orchestrator : request recommendation
+ANDROID --> Orchestrator : request recommendation\n(future)
+
+' --- Core to internal components ---
+Orchestrator --> Scoring : compute compatibility score
+Orchestrator --> RL : update weights\non feedback (optional)
+
+' --- Core to storage via adapters ---
+Orchestrator --> StorageAdapter : load wardrobe\nsave feedback
+StorageAdapter --> WardrobeDB
+StorageAdapter --> FeedbackDB
+
+' --- Core to perception via adapters (optional) ---
+Orchestrator --> VisionAdapter : analyze outfit photo\n(optional)
+VisionAdapter --> Vision
+VisionAdapter --> Color
+
+' --- External data via adapters (optional) ---
+Orchestrator --> WeatherAdapter : get weather label\n(optional)
+Orchestrator --> GeoAdapter : get coarse location\n(optional)
+
+WeatherAdapter --> WeatherAPI
+GeoAdapter --> GeoIP
+WeatherAPI --> Internet
+GeoIP --> Internet
+
+note right of Vision
+Weights are bundled for inference.
+Training dataset is not shipped.
+end note
+
+note bottom of WeatherAdapter
+Weather is an adapter: enriches context,
+never required for core scoring.
+end note
+
+@enduml
