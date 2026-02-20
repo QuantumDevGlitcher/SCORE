@@ -9,3 +9,21 @@ build/
 # JetBrains / PyCharm
 .idea/
 *.iml
+# ML / training artifacts (do not commit)
+data/raw/
+data/processed/
+datasets/
+models/
+checkpoints/
+runs/
+wandb/
+logs/
+*.pt
+*.pth
+*.ckpt
+*.onnx
+*.tflite
+*.h5
+*.pkl
+*.joblib
+*.npz
